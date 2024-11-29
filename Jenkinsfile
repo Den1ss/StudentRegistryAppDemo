@@ -29,20 +29,20 @@ pipeline {
             }
         }
 
-        stage('Start the program') {
+        stage('Start the program and run tests') {
             steps {
                 script {
                     sh 'npm start'
-                }
-            }
-        }
-
-        stage('Run tests') {
-            steps {
-                script {
+                    sh 'wait-on http://localhost:8080'
                     sh 'npm test'
                 }
             }
         }
     }
+
+    post {
+            always {
+                echo "CI pipeline completed"
+            }
+        }
 }

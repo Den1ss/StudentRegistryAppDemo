@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        NODE_VERSION = '20.x'
+        NODE_VERSIONS = '20.x'
     }
 
     tools {
-        nodejs '${NODE_VERSION}'
+        nodejs '${NODE_VERSIONS}'
     }
 
     stages {

@@ -20,10 +20,10 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'npm install'
+                        bat 'npm install'
                     }
                     else {
-                        sh 'npm install'
+                        bat 'npm install'
                     }
                 }
             }
@@ -32,9 +32,9 @@ pipeline {
         stage('Start the program and run tests') {
             steps {
                 script {
-                    sh 'npm start'
-                    sh 'wait-on http://localhost:8080'
-                    sh 'npm test'
+                    bat 'npm start &'
+                    bat 'wait-on http://localhost:8080'
+                    bat 'npm test'
                 }
             }
         }

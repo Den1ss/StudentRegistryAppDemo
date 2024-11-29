@@ -32,7 +32,7 @@ jobs:
     - name: Install the dependencies
       run: npm install
     - name: Start the program
-      run: npm start
+      run: npm start &
     - name: Give permission to Mocha
       run: chmod +x ./node_modules/.bin/mocha
     - name: Run the tests

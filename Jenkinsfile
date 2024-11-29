@@ -1,12 +1,8 @@
 pipeline {
     agent any
 
-    environment {
-        NODE_VERSIONS = '20.x'
-    }
-
     tools {
-        nodejs '${NODE_VERSIONS}'
+        nodejs 'NodeJS'
     }
 
     stages {

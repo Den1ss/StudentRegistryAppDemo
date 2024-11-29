@@ -30,5 +30,7 @@ jobs:
       run: npm install
     - name: Start the program
       run: npm start
+    - name: Wait for server
+      run: wait-on http://localhost:8080
     - name: Run the tests
-      run: npx mocha
+      run: npm test

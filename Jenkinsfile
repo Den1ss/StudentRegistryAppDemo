@@ -24,7 +24,13 @@ pipeline {
         stage('Start the program and run tests') {
             steps {
                 script {
-                    bat 'npm start &'
+                    bat 'start cmd /c "npm start"'
+                }
+            }
+        }
+        stage('Start the program and run tests') {
+            steps {
+                script {
                     bat 'npm test'
                 }
             }

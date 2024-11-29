@@ -29,8 +29,6 @@ jobs:
     - name: Install the dependencies
       run: npm install
     - name: Start the program
-      run: npm start
-    - name: Wait for server
-      run: wait-on http://localhost:8080
+      run: npm start &
     - name: Run the tests
       run: npm test

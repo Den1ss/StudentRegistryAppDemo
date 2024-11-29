@@ -31,4 +31,4 @@ jobs:
     - name: Start the program
       run: npm start
     - name: Run the tests
-      run: npm test
+      run: npx mocha
